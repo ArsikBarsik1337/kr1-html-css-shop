@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оформление заказа — Учебный интернет-магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__logo" href="index.html">ShopProject</a>
+    <nav class="site-nav" aria-label="Основная навигация">
+      <ul class="site-nav__list">
+        <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="product.html">Пример товара</a></li>
+        <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="order.html">Оформление заказа</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <a class="breadcrumbs__link" href="index.html">Главная</a>
+    <span class="breadcrumbs__current">Оформление заказа</span>
+  </nav>
+
+  <section class="section">
+    <h1>Оформление заказа</h1>
+    <p>Пожалуйста, заполните форму ниже, чтобы мы могли связаться с вами.</p>
+    
+    <form class="order-form" action="#" method="post" novalidate style="max-width: 500px;">
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-page-name">Имя</label>
+        <input class="order-form__input" id="order-page-name" name="name" type="text" required>
+      </div>
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-page-email">E-mail</label>
+        <input class="order-form__input" id="order-page-email" name="email" type="email" required>
+      </div>
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-page-tel">Телефон</label>
+        <input class="order-form__input" id="order-page-tel" name="tel" type="tel" required>
+      </div>
+      <div class="order-form__actions">
+        <button class="button button--primary" type="submit">Подтвердить заказ</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+  <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+</footer>
+<a href="#" class="button-up" aria-label="Вернуться наверх">↑</a>
+</body>
+</html>
