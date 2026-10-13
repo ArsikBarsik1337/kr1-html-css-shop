@@ -6,148 +6,153 @@
   <meta name="description" content="Каталог товаров учебного интернет-магазина.">
   <title>Каталог товаров — Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
+<header class="site-header">
   <div class="site-header__inner">
-    <a class="site-header__logo" href="index.html">ShopProject</a>
-
+    <a class="site-header__logo" href="index.html">Магазин Жучков</a>
     <nav class="site-nav" aria-label="Основная навигация">
       <ul class="site-nav__list">
         <li class="site-nav__item">
-          <a class="site-nav__link site-nav__link--active" href="index.html">
-            Главная
-          </a>
+          <a class="site-nav__link" href="index.html">Главная</a>
         </li>
         <li class="site-nav__item">
-          <a class="site-nav__link" href="catalog.html">Каталог</a>
+          <a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="product.html">Карточка товара</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="order.html">Оформление заказа</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="faq.html">FAQ</a>
         </li>
         <li class="site-nav__item">
           <a class="site-nav__link" href="contacts.html">Контакты</a>
         </li>
         <li class="site-nav__item">
-          <a class="site-nav__link" href="index.html#popular">
-            Популярные товары
-          </a>
+          <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
         </li>
       </ul>
     </nav>
   </div>
 </header>
 
+<main>
+  <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <a class="breadcrumbs__link" href="index.html">Главная</a>
+    <span class="breadcrumbs__current">Каталог</span>
+  </nav>
 
-  <main>
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-  <a class="breadcrumbs__link" href="index.html">Главная</a>
-  <span class="breadcrumbs__current">Каталог</span>
-</nav>
-
-
-    <section class="section">
-      <h1>Каталог товаров</h1>
-      <p>
-        На этой странице представлен учебный каталог товаров.
-        В дальнейшем здесь будут добавлены фильтры, сортировка и более
-        подробные карточки.
-      </p>
-    </section>
-
-    <section class="catalog-layout">
-  <aside class="catalog-filters">
-    <h2>Фильтры</h2>
-
-    <form class="filters-form" action="#" method="get">
-      <fieldset>
-        <legend>Категория</legend>
-
-        <label>
-          <input type="checkbox" name="category" value="all">
-          Все товары
-        </label>
-
-        <label>
-          <input type="checkbox" name="category" value="popular">
-          Популярные
-        </label>
-
-        <label>
-          <input type="checkbox" name="category" value="new">
-          Новинки
-        </label>
-      </fieldset>
-
-      <fieldset>
-        <legend>Цена</legend>
-
-        <label for="price-from">От</label>
-        <input id="price-from" name="price-from" type="number" min="0" placeholder="0">
-
-        <label for="price-to">До</label>
-        <input id="price-to" name="price-to" type="number" min="0" placeholder="5000">
-      </fieldset>
-
-      <button class="button" type="submit">Применить</button>
-    </form>
-  </aside>
-
-  <section class="catalog-products">
-    <h2>Список товаров</h2>
-
-    <div class="products-grid">
-      <article class="product-card">
-        <h3>Товар 1</h3>
-        <p>Краткое описание учебного товара.</p>
-        <p>Цена: 1000 руб.</p>
-        <a class="button" href="index.html#popular">Подробнее</a>
-      </article>
-
-      <article class="product-card">
-        <h3>Товар 2</h3>
-        <p>Краткое описание учебного товара.</p>
-        <p>Цена: 1500 руб.</p>
-        <a class="button" href="index.html#popular">Подробнее</a>
-      </article>
-
-      <article class="product-card">
-        <h3>Товар 3</h3>
-        <p>Краткое описание учебного товара.</p>
-        <p>Цена: 2000 руб.</p>
-        <a class="button" href="index.html#popular">Подробнее</a>
-      </article>
-    </div>
+  <section class="section">
+    <h1>Каталог товаров</h1>
+    <p>
+      На этой странице представлен учебный каталог товаров.
+      В дальнейшем здесь будут добавлены фильтры, сортировка и более
+      подробные карточки.
+    </p>
   </section>
-</section>
-<!--
-    <section class="section">
+
+  <section class="catalog-layout">
+    <aside class="catalog-filters">
+      <h2>Фильтры</h2>
+
+      <form class="filters-form" action="#" method="get">
+        <fieldset>
+          <legend>Категория</legend>
+
+          <label>
+            <input type="checkbox" name="category" value="all">
+            Все товары
+          </label>
+
+          <label>
+            <input type="checkbox" name="category" value="popular">
+            Популярные
+          </label>
+
+          <label>
+            <input type="checkbox" name="category" value="new">
+            Новинки
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Цена</legend>
+
+          <label for="price-from">От</label>
+          <input id="price-from" name="price-from" type="number" min="0" placeholder="0">
+
+          <label for="price-to">До</label>
+          <input id="price-to" name="price-to" type="number" min="0" placeholder="5000">
+        </fieldset>
+
+        <button class="button button--primary" type="submit">Применить</button>
+      </form>
+    </aside>
+
+    <section class="catalog-products">
       <h2>Список товаров</h2>
 
-      <article class="product-card">
-        <h3>Товар 1</h3>
-        <p>Краткое описание учебного товара.</p>
-        <p>Цена: 1000 руб.</p>
-        <a class="button" href="index.html#popular">Подробнее</a>
-      </article>
+      <div class="products-grid">
+  <article class="product-card product-card--featured">
+    <span class="product-card__badge product-card__badge--new">Новинка</span>
+    <img
+      class="product-card__image"
+      src="images/telifon.webp"
+      alt="Телифон"
+      width="300"
+      height="200"
+      loading="lazy"
+    >
+    <h3 class="product-card__title">Телифон</h3>
+    <p class="product-card__description">Относится к отряду тропических и субтропических паукообразных.</p>
+    <p class="product-card__price">Цена: 6000 руб.</p>
+    <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+  </article>
 
-      <article class="product-card">
-        <h3>Товар 2</h3>
-        <p>Краткое описание учебного товара.</p>
-        <p>Цена: 1500 руб.</p>
-        <a class="button" href="index.html#popular">Подробнее</a>
-      </article>
+  <article class="product-card product-card--featured">
+    <span class="product-card__badge">Хит</span>
+    <img
+      class="product-card__image"
+      src="images/kozyavka.webp"
+      alt="Козявка"
+      width="300"
+      height="200"
+      loading="lazy"
+    >
+    <h3 class="product-card__title">Козявка</h3>
+    <p class="product-card__description">Относится к подсемейству жуков из семейства листоедов.</p>
+    <p class="product-card__price">Цена: 2000 руб.</p>
+    <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+  </article>
 
-      <article class="product-card">
-        <h3>Товар 3</h3>
-        <p>Краткое описание учебного товара.</p>
-        <p>Цена: 2000 руб.</p>
-        <a class="button" href="index.html#popular">Подробнее</a>
-      </article>
+  <article class="product-card product-card--featured">
+    <span class="product-card__badge">Скидка</span>
+    <img
+      class="product-card__image"
+      src="images/maika.webp"
+      alt="Майка"
+      width="300"
+      height="200"
+      loading="lazy"
+    >
+    <h3 class="product-card__title">Майка</h3>
+    <p class="product-card__description">Относится к роду нарывников из подсемейства Meloinae.</p>
+    <p class="product-card__price">Цена: 1000 руб.</p>
+    <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+  </article>
+</div>
     </section>
-  -->
-  </main>
+  </section>
+</main>
 
-  <footer>
-    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
-    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
-  </footer>
+<footer class="site-footer">
+  <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+  <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+</footer>
+<a href="#" class="button-up" aria-label="Вернуться наверх">↑</a>
 </body>
 </html>

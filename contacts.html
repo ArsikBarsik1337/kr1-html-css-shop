@@ -3,71 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Контактная информация учебного интернет-магазина.">
-  <title>Контакты — Учебный интернет-магазин</title>
+  <meta name="description" content="Контактная информация магазина «Магазин Жучков».">
+  <title>Контакты — Магазин Жучков</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
- <header class="site-header">
+<header class="site-header">
   <div class="site-header__inner">
-    <a class="site-header__logo" href="index.html">ShopProject</a>
-
+    <a class="site-header__logo" href="index.html">Магазин Жучков</a>
     <nav class="site-nav" aria-label="Основная навигация">
       <ul class="site-nav__list">
         <li class="site-nav__item">
-          <a class="site-nav__link site-nav__link--active" href="index.html">
-            Главная
-          </a>
+          <a class="site-nav__link" href="index.html">Главная</a>
         </li>
         <li class="site-nav__item">
           <a class="site-nav__link" href="catalog.html">Каталог</a>
         </li>
         <li class="site-nav__item">
-          <a class="site-nav__link" href="contacts.html">Контакты</a>
+          <a class="site-nav__link" href="product.html">Карточка товара</a>
         </li>
         <li class="site-nav__item">
-          <a class="site-nav__link" href="index.html#popular">
-            Популярные товары
-          </a>
+          <a class="site-nav__link" href="order.html">Оформление заказа</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="faq.html">FAQ</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link site-nav__link--active" href="contacts.html" aria-current="page">Контакты</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
         </li>
       </ul>
     </nav>
   </div>
 </header>
 
+<main>
+  <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <a class="breadcrumbs__link" href="index.html">Главная</a>
+    <span class="breadcrumbs__current">Контакты</span>
+  </nav>
 
-  <main>
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-  <a class="breadcrumbs__link" href="index.html">Главная</a>
-  <span class="breadcrumbs__current">Каталог</span>
-</nav>
+  <section class="section">
+    <h1>Контакты</h1>
+    <p>
+      Свяжитесь с нами удобным способом — мы поможем с выбором,
+      ответим на вопросы о содержании и доставке членистоногих.
+    </p>
 
+    <ul>
+      <li>Телефон: +7 (900) 000-00-00</li>
+      <li>E-mail: info@example.com</li>
+      <li>Адрес: г. Москва, учебный проект</li>
+      <li>Режим работы: ежедневно с 10:00 до 20:00</li>
+    </ul>
+  </section>
+<section class="section" id="map">
+  <h2>Мы на карте</h2>
+  <div class="map-wrapper">
+    <script type="text/javascript" charset="utf-8" async
+      src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1064e2da4d7f93d2129bfcefa81626c49e4cedf77188eff3b9a69c03e477991c&amp;lang=ru_RU&amp;scroll=false">
+    </script>
+  </div>
+</section>
+  <section class="section" id="feedback">
+    <h2>Обратная связь</h2>
+    <p>
+      Для отправки заявки используйте форму оформления заказа
+      или оставьте вопрос через страницу FAQ.
+    </p>
+    <div class="product-details__actions">
+      <a class="button button--primary" href="order.html">Перейти к форме заказа</a>
+      <a class="button button--secondary" href="faq.html">Читать FAQ</a>
+    </div>
+  </section>
+</main>
 
-    <section class="section">
-      <h1>Контакты</h1>
-      <p>
-        Здесь размещается контактная информация учебного интернет-магазина.
-      </p>
-
-      <ul>
-        <li>Телефон: +7 (900) 000-00-00</li>
-        <li>E-mail: info@example.com</li>
-        <li>Адрес: г. Москва, учебный проект</li>
-      </ul>
-    </section>
-
-    <section class="section" id="feedback">
-      <h2>Обратная связь</h2>
-      <p>
-        Для отправки заявки используйте форму в модальном окне на главной странице.
-      </p>
-      <a class="button" href="index.html#contacts">Перейти к форме</a>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+<footer class="site-footer" id="contacts-footer">
+  <div class="site-footer__inner">
+    <p>&copy; 2026 Магазин Жучков. Все права защищены.</p>
     <p>Дисциплина: Фронтенд и бэкенд разработка</p>
-  </footer>
+  </div>
+</footer>
+
+<a href="#" class="button-up" aria-label="Вернуться наверх">↑</a>
 </body>
 </html>
